@@ -1,170 +1,319 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Venu  | Portfolio</title>
+<title>Venu | Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
 body {
-    background: #0f172a;
-    color: #fff;
+  background: #0b1220;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: #020617;
-}
-nav h1 {
-    color: #38bdf8;
-}
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in;
 }
 
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-}
-.hero h2 {
-    font-size: 42px;
-}
-.hero span {
-    color: #38bdf8;
-}
-.hero p {
-    margin-top: 10px;
-    color: #cbd5f5;
-}
-.hero button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: #38bdf8;
-    color: #000;
-    cursor: pointer;
-    border-radius: 5px;
+h1 {
+  font-size: 45px;
 }
 
-/* Section */
+p {
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #4fc3f7;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #29b6f6;
+}
+
 section {
-    padding: 50px;
-    text-align: center;
-}
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-/* Skills */
 .skills span {
-    display: inline-block;
-    background: #38bdf8;
-    color: #000;
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 20px;
+  display: inline-block;
+  background: #1e2a47;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
-/* Footer */
+.skills span:hover {
+  background: #4fc3f7;
+  color: black;
+}
+
+.project {
+  background: #1e2a47;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 320px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
 footer {
-    background: #020617;
-    padding: 20px;
-    text-align: center;
-    color: #94a3b8;
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@media(max-width: 600px) {
+  h1 { font-size: 30px; }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-    <h1>Venu</h1>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<header>
+  <h1>Hi, I'm Venu 👋</h1>
+  <p>B.Tech CSE Student | Developer</p>
 
-<div class="hero">
-    <h2>Hello, I'm <span>Venu </span></h2>
-    <p>B.Tech CSE Student | Developer</p>
-    <button onclick="scrollToSection()">View My Work</button>
-</div>
+  <a href="#projects" class="btn">View My Work</a>
+  <a href="resume.pdf" class="btn">Download Resume</a>
+</header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a Computer Science Engineering student passionate about building software 
-        and solving real-world problems. I enjoy working with programming languages 
-        like C and Python and continuously learning new technologies.
-    </p>
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a Computer Science Engineering student passionate about building 
+    software and solving real-world problems. I specialize in C and Python 
+    and love learning new technologies.
+  </p>
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>C</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>GitHub</span>
-    </div>
+<section class="skills">
+  <h2>Skills</h2>
+  <span>C</span>
+  <span>Python</span>
+  <span>HTML</span>
+  <span>GitHub</span>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Cloud Storage Quota Manager</h3>
-            <p>Multi-user system using C & Python with CLI interface</p>
-        </div>
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Personal website hosted using GitHub Pages</p>
-        </div>
-        <div class="card">
-            <h3>DBMS Mini Project</h3>
-            <p>Database design and management system project</p>
-        </div>
-    </div>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Cloud Storage Manager</h3>
+    <p>CLI + GUI project using C and Python</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>Portfolio Website</h3>
+    <p>Personal website hosted online</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: venuvardhan8@gmail.com</p>
+<section>
+  <h2>Contact</h2>
+  <p>Email: venuvardhan8@gmail.com</p>
 </section>
 
 <footer>
-    <p>© 2026 Venu  | All Rights Reserved</p>
+  <p>© 2026 Venu | Built with ❤️</p>
 </footer>
 
-<script>
-function scrollToSection() {
-    document.getElementById("projects").scrollIntoView({behavior: "smooth"});
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venu | Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-</script>
+
+body {
+  background: #0b1220;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #4fc3f7;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #29b6f6;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  background: #1e2a47;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #4fc3f7;
+  color: black;
+}
+
+.project {
+  background: #1e2a47;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 320px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@media(max-width: 600px) {
+  h1 { font-size: 30px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Hi, I'm Venu 👋</h1>
+  <p>B.Tech CSE Student | Developer</p>
+
+  <a href="#projects" class="btn">View My Work</a>
+  <a href="resume.pdf" class="btn">Download Resume</a>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a Computer Science Engineering student passionate about building 
+    software and solving real-world problems. I specialize in C and Python 
+    and love learning new technologies.
+  </p>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <span>C</span>
+  <span>Python</span>
+  <span>HTML</span>
+  <span>GitHub</span>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Cloud Storage Manager</h3>
+    <p>CLI + GUI project using C and Python</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>Portfolio Website</h3>
+    <p>Personal website hosted online</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: venuvardhan8@gmail.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Venu | Built with ❤️</p>
+</footer>
 
 </body>
 </html>
